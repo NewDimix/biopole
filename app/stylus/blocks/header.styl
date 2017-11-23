@@ -1,0 +1,33 @@
+.header
+    position relative
+    padding-top 20px
+
+    @media (min-width 1200px)
+        padding-top 46px
+
+    &__column
+        @media (min-width 1200px)
+            display inline-block
+            vertical-align top
+
+        &_2
+            @media (min-width 1200px)
+                float right
+
+    &__logo
+        display block
+        text-align center
+        margin-left auto
+        margin-right auto
+        margin-bottom 20px
+
+        @media (min-width 1200px)
+            margin-bottom 0
+            padding-top 23px
+
+        a
+            &:focus
+                outline-color #ffb92a
+
+        img
+            vertical-align top
