@@ -1,29 +1,27 @@
 .header
-    position relative
-    padding-top 20px
+    background-color #fff
+    padding2-func(10, 0)
 
-    @media (min-width 1200px)
-        padding-top 46px
+    @media (min-width 520px)
+        padding3-func(19, 0, 5)
 
-    &__column
-        @media (min-width 1200px)
-            display inline-block
-            vertical-align top
+    &__authorization
+        text-align center
+        margin-bottom 20px
 
-        &_2
-            @media (min-width 1200px)
-                float right
+        @media (min-width 768px)
+            float right
+            text-align right
+            padding-top 27px
+            margin-bottom 0
 
     &__logo
-        display block
         text-align center
         margin-left auto
         margin-right auto
-        margin-bottom 20px
 
-        @media (min-width 1200px)
-            margin-bottom 0
-            padding-top 23px
+        @media (min-width 768px)
+            float left
 
         a
             &:focus

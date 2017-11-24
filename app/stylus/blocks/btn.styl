@@ -1,0 +1,30 @@
+.btn
+    display inline-block
+    background-color $purple-light-color
+    border-radius 4px
+    text-transform uppercase
+    text-decoration none
+    border none
+    color white
+    font-size-func(10)
+    font-weight 900
+    letter-spacing 0.05em
+    ellipsis()
+
+    &_user
+        position relative
+        padding-left-func(29)
+
+        &:after
+            content ""
+            width 19px
+            width 1.9rem
+            height 19px
+            height 1.9rem
+            border-radius 50%
+            background url(../img/user-icon.png) center / cover no-repeat
+            position absolute
+            left 5px
+            left .5rem
+            top 50%
+            transform translateY(-50%)
