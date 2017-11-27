@@ -1,9 +1,43 @@
+$xs = 768px // до какой ширины экрана доступно разворачивающееся меню
+
+$menu-icon-bgc = white // цвет гамбургера и надписи "MENU"
+$menu-btn-c = white // цвет надписи "MENU"
+$menu-btn-bgc = $purple-dark-color // цвет фона кнопки
+
+
+
+//////////////////////////////////////////// Mobile (xs):
+
+// 1 уровень меню:
+$menu-1-bgc-m = $purple-light-color // цвет фона
+$menu-1-c-m = white // цвет текста
+
+menu-1-p-m() // padding для a/span
+    padding4-func(17, 30, 17, 45)
+
+
+$menu-1-bw-m = 1px // толщина border для li
+$menu-1-bc-m = $purple-dark-color // цвет border для li
+
+
+
+//////////////////////////////////////////// Desktop (sm):
+
+// 1 уровень меню:
+$menu-1-bgc-d = $purple-light-color // цвет фона
+$menu-1-c-d = white // цвет текста
+
+menu-1-p-d() // padding для a/span
+    padding4-func(9, 8, 9, 45)
+
+
+
 menu__icon()
     cursor pointer
     border-radius 1px
     height 3px
     width 25px
-    background-color white
+    background-color $menu-icon-bgc
     position absolute
     display block
     content ''
@@ -11,67 +45,45 @@ menu__icon()
 
 ul()
     list-style none
-    margin 0
-    padding 0
-    position relative
-    top 100%
-    left 0
-    width 100%
-    background-color $purple-light-color
-    overflow hidden
     z-index 9999
-    height auto
-    display none
     transition all 0s ease-out 0s
-
-    @media (min-width 480px)
-        display block
-        overflow visible
-
-    @media (min-width 768px)
-        text-align right
-
-li()
-    display block
-    margin 0
-    position relative
-    border-bottom 1px solid rgba(94, 42, 114, 0.5)
-    hyphens()
-
-    @media (min-width 480px)
-        border none
-
-    @media (min-width 768px)
-        margin-right 23px
-
-    &:last-child
-        @media (min-width 480px)
-            border-bottom none
-        @media (min-width 480px)
-            margin-right 0
 
 a()
     display inline-block
     width 100%
     font-size-func(16)
     font-weight 700
-    letter-spacing 0.05em
     text-transform uppercase
-    color white
     text-decoration none
-    padding4-func(17, 30, 17, 17)
-
-    @media (min-width 480px)
-        padding1-func(9)
-        color white
 
 .menu
     position relative
+    margin-bottom 28px
+
+    @media (min-width $xs)
+        margin-bottom 0
+
+    ul
+        ul()
+
+    li
+        hyphens()
+
+    a
+        a()
+
+    span
+        display inline-block
+        font-size-func(16)
+        font-weight 700
+        text-transform uppercase
+        text-decoration none
+        cursor pointer
 
     &__btn
         width 100%
-        background-color $purple-dark-color
-        color white
+        background-color $menu-btn-bgc
+        color $menu-btn-c
         width 100%
         text-align left
         position relative
@@ -81,7 +93,7 @@ a()
         border none
         ellipsis()
 
-        @media (min-width 480px)
+        @media (min-width $xs)
             display none
 
         &.open
@@ -115,34 +127,46 @@ a()
             bottom 8px
 
     &__title
-        line-height 40px
-        line-height 4rem
         text-transform uppercase
-        font-size-func(20)
-        font-weight 900
+        font-size-func(18)
+        padding-top-func(8)
+        padding-bottom-func(8)
+        font-weight 700
 
     &__ul
-        ul()
+        background-color $menu-1-bgc-m
+        display none
+        max-width 100%
 
-        @media (min-width 480px)
-            padding 20px 0
+        @media (min-width $xs)
+            background-color $menu-1-bgc-d
+            display inline-block
+            padding 15px 0
 
         ul
-            ul()
-
-        li
-            li()
-
-        a
-            a()
+            display none
 
         span
-            @extend .menu__ul a
-            cursor pointer
+            width 100%
 
         > li
+            position relative
+            border-bottom $menu-1-bw-m solid $menu-1-bc-m
+
+            @media (min-width $xs)
+                border none
+
+            &:last-child
+                @media (min-width $xs)
+                    margin-right 0
+
             > a
-                padding-left 45px
+                menu-1-p-m()
+                color $menu-1-c-m
+
+                @media (min-width $xs)
+                    menu-1-p-d()
+                    color $menu-1-c-d
 
                 &:before
                     content ""
@@ -152,91 +176,13 @@ a()
                     top 50%
                     transform translate(-50%, -50%)
 
-            > span
-                padding-left 45px
-
-                &:before
-                    content ""
-                    position absolute
-                    left 22px
-                    left 2.2rem
-                    top 50%
-                    transform translate(-50%, -50%)
-
-            > ul
-                background-color white
-
-                @media (min-width 480px)
-                    display none
-                    width 100%
-                    background-color white
-
-                > li
-                    border-bottom none
-                    border-top 1px solid #ccc
-
-                    &:first-child
-                        @media (max-width 480px)
-                            border-top-color rgba(94, 42, 114, 0.8)
-
-                    @media (min-width 480px)
-                        display block
-                        margin-right 0
-                        border-top 1px solid #ccc
-
-                    @media (min-width 768px)
-                        margin-right 0
-
-                    > a
-                        padding 10px 30px 10px 34px
-                        color $purple-light-color
-
-                        @media (min-width 480px)
-                            padding 10px 20px 10px 15px
-
-                    > span
-                        @extend .menu__ul > li > ul > li > a
-                        cursor pointer
-
-                        &.open
-                            background-color rgba(167, 115, 180, 0.2)
-
-                    > ul
-                        top 0
-                        padding-left 0
-                        background-color white
-
-                        @media (min-width 480px)
-                            display none
-                            text-align left
-
-                        @media (min-width 768px)
-                            text-align left
-
-                        > li
-                            border-bottom 0
-                            border-top 1px solid #ccc
-
-                            @media (min-width 480px)
-                                display block
-                                margin-right 0
-                                border-top 1px solid #ccc
-
-                            @media (min-width 768px)
-                                margin-right 0
-
-                            > a
-                                color $purple-light-color
-                                padding 10px 5px 10px 51px
-
-                                @media (min-width 480px)
-                                    padding 10px 5px 10px 23px
-                                    color $purple-light-color
+                &:hover
+                    background-color rgba(255, 255, 255, 0.15)
 
         span
             position relative
 
-            &:after
+            &:before
                 content ""
                 position absolute
                 right 5%
@@ -244,13 +190,13 @@ a()
                 transform translateY(-70%) rotate(45deg)
                 width 5px
                 height 5px
-                border 4px solid $purple-dark-color
+                border 4px solid red
                 border-left-color transparent
                 border-top-color transparent
                 transition all .5s ease
 
             &.open
-                &:after
+                &:before
                     transform translateY(-30%) rotate(225deg)
 
     &__dashboard

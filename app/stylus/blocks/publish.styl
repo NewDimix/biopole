@@ -1,0 +1,59 @@
+.publish
+    font-size 0
+    &__item
+        display inline-block
+        vertical-align top
+        text-align center
+        color $grey-dark-color
+        text-decoration none
+        text-transform uppercase
+        font-weight 700
+        background-color white
+        padding 80px 10px 40px
+        transition all .15s linear
+
+        &:hover
+            background-color $purple-light-color
+            color white
+
+            &.publish__item_event
+                p
+                    &:before
+                        background inline("events-icon-big-w.png") center no-repeat
+
+            &.publish__item_news
+                p
+                    &:before
+                        background inline("news-icon-big-w.png") center no-repeat
+
+        &_event
+            width 47.07%
+            margin-right 5.86%
+
+            p
+                &:before
+                    width 33px
+                    height 31px
+                    background inline("events-icon-big.png") center no-repeat
+
+        &_news
+            width 47.07%
+
+            p
+                &:before
+                    width 27px
+                    height 31px
+                    background inline("news-icon-big.png") center no-repeat
+
+        p
+            position relative
+            hyphens()
+            font-size-func(18)
+
+            &:first-child
+                &:before
+                    content ""
+                    position absolute
+                    top -46px
+                    left 50%
+                    transform translateX(-50%)

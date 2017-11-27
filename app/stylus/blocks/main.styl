@@ -1,20 +1,36 @@
 .main
-    padding 0 0 40px
+    padding 25px 0
     font-size 0
 
-    @media (min-width 1200px)
-        padding 70px 0
-
     &__column
-        @media (min-width 480px)
+        @media (min-width 768px)
             font-size 15px
             display inline-block
             vertical-align top
+
+        &_1
+            @media (min-width 768px)
+                float left
+                width 26%
+                margin-right 2%
+
+        &_2
+            @media (min-width 768px)
+                width 72%
 
     &__menu
         margin-left -10px
         margin-right -10px
 
-        @media (min-width 480px)
+        @media (min-width 768px)
             margin-left 0
             margin-right 0
+
+    &__events
+        margin-bottom 28px
+
+    &__publish
+        margin-bottom 28px
+
+    &__search
+        margin-bottom 28px
