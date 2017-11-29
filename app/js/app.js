@@ -1,6 +1,22 @@
+var today = new Date();
+var number = today.getDate();
+var day = today.getDay();
+
+var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+for (var i = 0; i < days.length - 1; i++) {
+  if (i === day) {
+    day = days[i];
+    break;
+  }
+}
+
+document.getElementById('js-day').innerHTML = ("<p>" + day + "</p>");
+document.getElementById('js-number').innerHTML = ("<p>" + number + "</p>");
+
 $(window).on('load', function () {
   $preloader = $('.js-loader'),
-  $loader = $preloader.find('.loader__img');
+    $loader = $preloader.find('.loader__img');
   $loader.fadeOut();
   $preloader.delay(0).fadeOut('slow');
 
@@ -51,4 +67,15 @@ $(window).on('load', function () {
     $.myfn('.js-menu-content > li > ul > li');
 
   });
+
+  $('.calendar__month').slick({
+    dots: false,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    adaptiveHeight: false,
+    prevArrow: '<span class="calendar__arrow calendar__arrow_prev">«</span>',
+    nextArrow: '<span class="calendar__arrow calendar__arrow_next">»</span>',
+  });
+
 });

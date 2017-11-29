@@ -72,7 +72,9 @@ gulp.task('css-vendors', function () {
     csso
   ];
   return gulp.src([
-    'node_modules/normalize.css/normalize.css'
+    'node_modules/normalize.css/normalize.css',
+    'node_modules/slick-carousel/slick/slick.css',
+    'node_modules/slick-carousel/slick/slick-theme.css'
   ])
     .pipe(postcss(plugins))
     .pipe(concat('vendor.min.css'))
@@ -114,7 +116,8 @@ gulp.task('js', function () {
 
 gulp.task('js-vendors', function () {
   return gulp.src([
-    'node_modules/jquery/dist/jquery.min.js'
+    'node_modules/jquery/dist/jquery.min.js',
+    'node_modules/slick-carousel/slick/slick.min.js'
   ])
     .pipe(concat('vendor.min.js'))
     .pipe(uglify())

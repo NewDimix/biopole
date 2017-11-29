@@ -1,0 +1,61 @@
+.calendar
+    &__today
+        background-color $purple-light-color
+        color white
+        padding 32px 10px 26px
+        text-align center
+
+    p
+        margin-top 0
+        margin-bottom 0
+
+    &__day
+        font-size-func(14)
+        text-transform uppercase
+
+    &__number
+        font-size-func(80)
+
+    &__month
+        background-color white
+        color black
+        font-size-func(15)
+        padding 24px 0
+
+        table
+            width 100%
+            text-align center
+
+        caption
+            font-size-func(14)
+            color black
+            font-weight 700
+            margin-bottom 15px
+
+        thead
+            font-size-func(12)
+            color $grey-medium-color
+            font-weight 700
+
+        tbody
+            color $grey-medium-color
+
+        td
+            padding 9px 0
+
+    &__arrow
+        position absolute
+        top 16px
+        z-index 1
+        width 30px
+        line-height 30px
+        text-align center
+
+        &:hover
+            cursor pointer
+
+        &_prev
+            left 14%
+
+        &_next
+            right 14%
