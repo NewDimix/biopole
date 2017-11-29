@@ -8,9 +8,12 @@ html
 body
     min-width 320px
     font-family MuseoSans, arial, verdana, sans-serif
-    background white url(../img/background.png) left top
+    background-color white
+    background-image url(../img/background.png)
+    background-position left top
     font-weight 400
     font-style normal
+    line-height normal
     color $grey-dark-color
     display flex
     flex-direction column
@@ -18,22 +21,15 @@ body
 
 .container
     position relative
-    max-width 1100px
-    padding 0 10px
+    max-width 1120px
+    padding-left 10px
+    padding-right 10px
     margin-left auto
     margin-right auto
 
-    @media (min-width 1120px)
-        padding 0
-
-ul, li, fieldset, h1, h2, h3, h4, h5, h6, p, button
-    margin 0
-    padding 0
-
 p
     &:not(:last-child)
-        margin-bottom 5px
+        margin-bottom 7px
 
-button
-    &:hover
-        cursor pointer
+    &:last-child
+        margin-bottom 0

@@ -2,21 +2,22 @@
     padding 25px 0
     font-size 0
 
-    &__column
+    &__aside
+        margin-bottom 28px
+
         @media (min-width 768px)
-            font-size 15px
-            display inline-block
-            vertical-align top
+            position sticky
+            top 10px
+            margin-bottom 0
+            float left
+            width 160px
+            width 16rem
 
-        &_1
-            @media (min-width 768px)
-                float left
-                width 26%
-                margin-right 2%
-
-        &_2
-            @media (min-width 768px)
-                width 72%
+    &__content
+        @media (min-width 768px)
+            display block
+            margin-left 205px
+            margin-left 20.5rem
 
     &__menu
         margin-left -10px
@@ -26,11 +27,14 @@
             margin-left 0
             margin-right 0
 
-    &__events
-        margin-bottom 28px
+    &__column
+        &:not(:last-child)
+            margin-bottom 28px
 
-    &__publish
-        margin-bottom 28px
+        &_2
+            {ibt}
+            width 50%
 
-    &__search
-        margin-bottom 28px
+    &__item
+        &:not(:last-child)
+            margin-bottom 28px

@@ -5,7 +5,6 @@ var gulp = require('gulp'),
   uglify = require('gulp-uglify'),
   gcmq = require('gulp-group-css-media-queries'),
   autoprefixer = require('autoprefixer'),
-  htmlmin = require('gulp-htmlmin'),
   imagemin = require('gulp-imagemin'),
   spritesmith = require('gulp.spritesmith'),
   base64 = require('gulp-base64-inline'),
@@ -43,7 +42,6 @@ gulp.task('html', function () {
       prefix: '@@',
       basepath: '@file'
     }))
-//    .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest(path.dist.html))
     .pipe(browserSync.reload({
       stream: true
@@ -137,3 +135,5 @@ gulp.task('watch', ['sync', 'css-vendors', 'css', 'html', 'js-vendors', 'js', 'i
   gulp.watch(path.watch.html, ['html']);
   gulp.watch(path.watch.js, ['js']);
 });
+
+gulp.task('default', ['watch']);

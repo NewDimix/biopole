@@ -3,27 +3,29 @@
 <header class="header">
     <div class="container">
 @@include('elements/authorization.html')
-
 @@include('elements/logo.html')
     </div>
 </header>
 
 <main class="main">
     <div class="container">
-        <div class="main__column main__column_1">
+        <aside class="main__aside">
 @@include('elements/menu.html')
-        </div>
-        <div class="main__column main__column_2 column">
+        </aside>
+        <div class="main__content">
+            <div class="main__column main__column_1 column">
 @@include('elements/events.html')
 @@include('elements/publish.html')
 @@include('elements/search.html')
 @@include('elements/more.html')
-        </div>
-        <div class="main__column main__column_3">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quos quasi vel quia, inventore amet repellendus. Enim facilis asperiores rerum voluptates obcaecati hic, quo rem, culpa nobis iste sint architecto.
-        </div>
-        <div class="main__column main__column_4">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quos quasi vel quia, inventore amet repellendus. Enim facilis asperiores rerum voluptates obcaecati hic, quo rem, culpa nobis iste sint architecto.
+            </div>
+            <div class="main__column main__column_2">
+@@include('elements/news.html')
+@@include('elements/topics.html')
+            </div>
+            <div class="main__column main__column_3">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quos quasi vel quia, inventore amet repellendus. Enim facilis asperiores rerum voluptates obcaecati hic, quo rem, culpa nobis iste sint architecto.
+            </div>
         </div>
     </div>
 </main>

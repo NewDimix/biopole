@@ -1,8 +1,7 @@
 .publish
     font-size 0
     &__item
-        display inline-block
-        vertical-align top
+        {ibt}
         text-align center
         color $grey-dark-color
         text-decoration none
@@ -19,12 +18,12 @@
             &.publish__item_event
                 p
                     &:before
-                        background inline("events-icon-big-w.png") center no-repeat
+                        content inline("events-icon-big-w.png")
 
             &.publish__item_news
                 p
                     &:before
-                        background inline("news-icon-big-w.png") center no-repeat
+                        content inline("news-icon-big-w.png")
 
         &_event
             width 47.07%
@@ -32,28 +31,25 @@
 
             p
                 &:before
-                    width 33px
-                    height 31px
-                    background inline("events-icon-big.png") center no-repeat
+                    content inline("events-icon-big.png")
+                    top -42px
 
         &_news
             width 47.07%
 
             p
                 &:before
-                    width 27px
-                    height 31px
-                    background inline("news-icon-big.png") center no-repeat
+                    content inline("news-icon-big.png")
+                    top -38px
 
         p
             position relative
+            margin-top 0
             hyphens()
             font-size-func(18)
 
             &:first-child
                 &:before
-                    content ""
                     position absolute
-                    top -46px
                     left 50%
                     transform translateX(-50%)

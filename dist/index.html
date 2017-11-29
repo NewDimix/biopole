@@ -19,21 +19,24 @@
 <header class="header">
     <div class="container">
 <div class="header__authorization authorization">
-    <button class="authorization__btn btn btn_user">John Butler</button>
-    <button class="authorization__btn btn">Log Out</button>
+    <a class="authorization__btn btn btn_user" href="#">
+        <img class="btn__icon" src="img/user-icon.png" alt="Avatar">
+        <span>John Butler</span>
+    </a>
+
+    <a class="authorization__btn btn" href="#">Log Out</a>
 </div>
 
-
-<div class="header__logo logo">
+<h1 class="header__logo logo">
     <a href="index.html"><img src="img/logo-biopole.png" alt="Biopole"></a>
-</div>
+</h1>
 
     </div>
 </header>
 
 <main class="main">
     <div class="container">
-        <div class="main__column main__column_1">
+        <aside class="main__aside">
 <div class="main__menu menu js-menu">
     <button class="menu__btn js-menu-btn">
         <span class="menu__icon"></span>
@@ -44,45 +47,46 @@
     <nav>
         <ul class="menu__ul js-menu-content">
             <li>
-                <a class="menu__dashboard" href="index.html">Dashboard</a>
+                <a class="menu__link menu__link_dashboard" href="index.html">Dashboard</a>
             </li>
             <li>
-                <a class="menu__forum" href="#">Forum<br>Marketplace</a>
+                <a class="menu__link menu__link_forum" href="#">Forum<br><span>Marketplace</span></a>
             </li>
             <li>
-                <a class="menu__around" href="#">Getting<br>Around</a>
+                <a class="menu__link menu__link_around" href="#">Getting<br>Around</a>
             </li>
             <li>
-                <a class="menu__news" href="#">News</a>
+                <a class="menu__link menu__link_news" href="#">News</a>
             </li>
             <li>
-                <a class="menu__events" href="#">Events</a>
+                <a class="menu__link menu__link_events" href="#">Events</a>
             </li>
             <li>
-                <a class="menu__services" href="#">Services</a>
+                <a class="menu__link menu__link_services" href="#">Services</a>
             </li>
             <li>
-                <a class="menu__search" href="#">Search<br>The Community</a>
+                <a class="menu__link menu__link_search" href="#">Search<br><span>The Community</span></a>
             </li>
         </ul>
     </nav>
 </div>
 
-        </div>
-        <div class="main__column main__column_2 column">
-<div class="main__events events">
+        </aside>
+        <div class="main__content">
+            <div class="main__column main__column_1 column">
+<div class="main__item events">
     <div class="events__text">
-        <h1 class="events__title">EVENTS by community</h1>
+        <h2 class="events__title">EVENTS by community</h2>
 
-        <div class="events__descr">
-            <p>15.06.2016 | 15:00 pm | xxxxxxxxxx</p>
-        </div>
+        <ul class="events__descr">
+            <li>15.06.2016 | 15:00 pm | xxxxxxxxxx</li>
+        </ul>
     </div>
 
-    <button class="events__btn btn">Events</button>
+    <a class="events__btn btn" href="#">Events</a>
 </div>
 
-<div class="main__publish publish">
+<div class="main__item publish">
     <a class="publish__item publish__item_event" href="#">
         <p>Publish an event</p>
     </a>
@@ -91,18 +95,15 @@
     </a>
 </div>
 
-<form class="main__search search" action="#">
-    <label>
-        <span class="search__text">Find a member</span>
-
-        <div class="search__input-group">
-            <input class="search__input" type="text">
-            <button class="search__btn">Find</button>
-        </div>
-    </label>
+<form class="main__item search" action="#">
+    <label class="search__text" for="search">Find a member</label>
+    <div class="search__input-group">
+        <input class="search__input" id="search" type="text">
+        <button class="search__btn">Find</button>
+    </div>
 </form>
 
-<div class="main__more more">
+<div class="main__item more">
     <a class="more__item more__item_book" href="#">
         <p>Book<br>a conference<br>room</p>
     </a>
@@ -111,18 +112,136 @@
     </a>
 </div>
 
+            </div>
+            <div class="main__column main__column_2">
+<a class="main__item news" href="#">
+    <h2 class="news__title">News by community</h2>
+    <p>04.01.2016</p>
+    <p>Le Conseil<br>D'administration<br>Se renforce</p>
+</a>
+
+<div class="main__item topics">
+    <h2 class="topics__title">Last topics</h2>
+
+    <div class="topics__item">
+        <div class="topics__user">
+            <p>
+                <img src="img/user-icon.png" alt="Avatar">
+
+                <a class="topics__user_name" href="#">John Butler</a> on <a class="topics__user_section" href="#">Sports</a>
+            </p>
         </div>
-        <div class="main__column main__column_3">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quos quasi vel quia, inventore amet repellendus. Enim facilis asperiores rerum voluptates obcaecati hic, quo rem, culpa nobis iste sint architecto.
+
+        <div class="topics__act">
+            <p>Growth, Sed be tempius libero.</p>
         </div>
-        <div class="main__column main__column_4">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quos quasi vel quia, inventore amet repellendus. Enim facilis asperiores rerum voluptates obcaecati hic, quo rem, culpa nobis iste sint architecto.
+
+        <div class="topics__date">
+            <p>3 weeks, 3 days ago</p>
+        </div>
+    </div>
+
+    <div class="topics__item">
+        <div class="topics__user">
+            <p>
+                <img src="img/user-icon.png" alt="Avatar">
+
+                <a class="topics__user_name" href="#">John Butler</a> on <a class="topics__user_section" href="#">Nice</a>
+            </p>
+        </div>
+
+        <div class="topics__act topics__act_hidden">
+            <p>Growth, Sed be tempius libero.</p>
+        </div>
+
+        <div class="topics__date">
+            <p>3 weeks, 3 days ago</p>
+        </div>
+    </div>
+
+    <div class="topics__item">
+        <div class="topics__user">
+            <p>
+                <img src="img/user-icon.png" alt="Avatar">
+
+                <a class="topics__user_name" href="#">John Butler</a> on <a class="topics__user_section" href="#">Mobile</a>
+            </p>
+        </div>
+
+        <div class="topics__act">
+            <p>Created Topic</p>
+        </div>
+
+        <div class="topics__date">
+            <p>3 weeks, 3 days ago</p>
+        </div>
+    </div>
+
+    <div class="topics__item">
+        <div class="topics__user">
+            <p>
+                <img src="img/user-icon.png" alt="Avatar">
+
+                <a class="topics__user_name" href="#">John Butler</a> on <a class="topics__user_section" href="#">Business</a>
+            </p>
+        </div>
+
+        <div class="topics__act">
+            <p>Creavtuve Tonic</p>
+        </div>
+
+        <div class="topics__date">
+            <p>3 weeks, 3 days ago</p>
+        </div>
+    </div>
+
+    <div class="topics__item">
+        <div class="topics__user">
+            <p>
+                <img src="img/user-icon.png" alt="Avatar">
+
+                <a class="topics__user_name" href="#">John Butler</a> on <a class="topics__user_section" href="#">Business</a>
+            </p>
+        </div>
+
+        <div class="topics__act">
+            <p>Creavtuve Tonic</p>
+        </div>
+
+        <div class="topics__date">
+            <p>3 weeks, 3 days ago</p>
+        </div>
+    </div>
+
+    <div class="topics__item">
+        <div class="topics__user">
+            <p>
+                <img src="img/user-icon.png" alt="Avatar">
+
+                <a class="topics__user_name" href="#">John Butler</a> on <a class="topics__user_section" href="#">Nice</a>
+            </p>
+        </div>
+
+        <div class="topics__act topics__act_hidden">
+            <p>Growth, Sed be tempius libero.</p>
+        </div>
+
+        <div class="topics__date">
+            <p>3 weeks, 3 days ago</p>
+        </div>
+    </div>
+</div>
+
+            </div>
+            <div class="main__column main__column_3">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quos quasi vel quia, inventore amet repellendus. Enim facilis asperiores rerum voluptates obcaecati hic, quo rem, culpa nobis iste sint architecto.
+            </div>
         </div>
     </div>
 </main>
 
 <footer class="footer">
-<div class="footer__bottom-line bottom-line">
+<div class="bottom-line">
     <div class="container">
         <p>Biopole SA &#149; Route de la Corniche 4 &#149; 1066 Epalinges &#149; Lausanne &#149; Switzerland &#149; T:+41 21 651 90 00 &#149; info@biopole.ch</p>
     </div>

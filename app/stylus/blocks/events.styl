@@ -1,12 +1,12 @@
 .events
     position relative
     min-height 327px
-    background url(../img/event.png) top center no-repeat
+    background-image url(../img/event.png)
+    background-position top center
     background-size cover
     padding 233px 0 29px
 
     &__text
-        //bottom 8.87%
         margin-left auto
         margin-right auto
         text-align center
@@ -20,6 +20,7 @@
         text-transform uppercase
         font-size-func(15)
         font-weight 700
+        margin-top 0
         margin-bottom 7px
         margin-bottom .7rem
 
@@ -27,6 +28,16 @@
         color white
         font-size-func(15)
         font-weight 700
+        list-style none
+        padding-left 0
+        margin-top 0
+        margin-bottom 0
+
+        li
+            hyphens()
+
+            &:not(:last-child)
+                margin-bottom 5px
 
     &__btn
         position absolute
