@@ -2,8 +2,9 @@
     &__today
         background-color $purple-light-color
         color white
-        padding 32px 10px 26px
+        padding 35px 10px 32px
         text-align center
+        hyphens()
 
     p
         margin-top 0
@@ -11,39 +12,45 @@
 
     &__day
         font-size-func(14)
+        hyphens()
         text-transform uppercase
 
     &__number
         font-size-func(80)
+        line-height 80px
+        line-height 8rem
 
     &__month
         background-color white
         color black
-        font-size-func(15)
-        padding 24px 0
+        font-size 15px
+        padding 22px 0
 
         table
             width 100%
             text-align center
+            padding 0 18px
 
         caption
-            font-size-func(14)
+            font-size 14px
             color black
             font-weight 700
-            margin-bottom 15px
+            margin-bottom 6px
 
         thead
-            font-size-func(12)
+            font-size 12px
             color $grey-medium-color
             font-weight 700
 
         tbody
+            font-size 11px
             color $grey-medium-color
 
         td
-            padding 9px 0
+            padding 7px 0
 
     &__arrow
+        font-size 15px
         position absolute
         top 16px
         z-index 1
@@ -59,3 +66,7 @@
 
         &_next
             right 14%
+
+.slick-slide
+    &:focus
+        outline none

@@ -1,6 +1,6 @@
 .search
     background-color $purple-ultralight-color
-    padding 15px 10px
+    padding 15px 5px
     font-size 0
     text-align center
 
@@ -26,6 +26,9 @@
         @media (min-width 624px)
             width 50%
 
+        @media (min-width 1100px)
+            width 65%
+
     &__input
         {ibm}
         font-size-func(16)
@@ -38,6 +41,9 @@
         border-right none
         border-top-left-radius 3px
         border-bottom-left-radius 3px
+
+        &:focus
+            outline 1px dotted $purple-light-color
 
     &__btn
         {ibm}
@@ -53,3 +59,12 @@
         border 1px solid $purple-light-color
         border-top-right-radius 3px
         border-bottom-right-radius 3px
+
+        &:hover
+            cursor pointer
+
+        &:active
+            background-size 48%
+
+        &:focus
+            outline 1px dotted $purple-light-color

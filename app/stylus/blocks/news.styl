@@ -4,7 +4,7 @@
     text-decoration none
     text-transform uppercase
     text-align center
-    padding 32px 10px 35px
+    padding 32px 6px 35px
     background-image url(../img/house.png)
     background-position center
     background-size cover
@@ -14,15 +14,24 @@
         box-shadow 8px 8px 0 0 rgba(0, 0, 0, 0.2)
         transform scale(1.025)
 
+    &:focus
+        outline 1px dotted $purple-light-color
+
     &__title
         font-size-func(15)
+        hyphens()
         font-weight 700
         margin-top 0
         margin-bottom 7px
         color $green-color
+        letter-spacing 0.05em
 
     p
         hyphens()
         margin-top 0
         color $grey-dark-color
         font-weight 700
+        letter-spacing 0.05em
+
+        &:not(:last-child)
+            margin-bottom 4px

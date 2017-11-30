@@ -1,11 +1,12 @@
 .topics
-    padding 31px 15px 25px
+    padding 31px 5px 25px 15px
     background-color white
 
     &__title
         margin-top 0
         margin-bottom 29px
         font-size-func(22)
+        hyphens()
         color $grey-dark-color
         text-transform uppercase
 
@@ -16,7 +17,7 @@
         line-height 1.8rem
 
         &:not(:last-child)
-            margin-bottom 25px
+            margin-bottom 29px
 
         p
             margin-top 0
@@ -25,7 +26,12 @@
             &:hover
                 text-decoration underline
 
+            &:focus
+                outline 1px dotted $purple-light-color
+
     &__user
+        hyphens()
+
         img
             {ibm}
 
@@ -38,10 +44,13 @@
             text-decoration none
 
     &__act
+        hyphens()
+
         &_hidden
             display none
 
     &__date
+        hyphens()
         font-size-func(11)
 
 
